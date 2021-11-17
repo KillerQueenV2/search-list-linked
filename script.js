@@ -8,11 +8,16 @@ const resultField = document.querySelector("#result");
 let founded = [];
 let wordArray = [];
 
+textareaFIeld.value = localStorage.getItem("textareaFIeld");
+inputField.value = localStorage.getItem("inputField");
+resultField.value = localStorage.getItem("result");
+
 button.onclick = () => {
   const { value } = textareaFIeld;
+  localStorage.setItem("textareaFIeld", value);
   wordArray = value.split(" ");
   generateLinkedList(wordArray);
-  listar();
+  pesquisar();
 };
 
 function generateLinkedList(wordArray) {
@@ -28,7 +33,7 @@ function generateLinkedList(wordArray) {
 let index = 0;
 let row = 0;
 
-function listar() {
+function pesquisar() {
   let aux = { ...list };
   var novoArray = [];
   var corte = 48;
@@ -48,6 +53,7 @@ function listar() {
         .map((e) => e.replace(/\s/g, ""))
         .indexOf(inputField.value);
 
+      localStorage.setItem("inputField", inputField.value);
       const row = i;
 
       if (column !== -1) {
@@ -79,7 +85,6 @@ function listar() {
   );
   novoArray;
   resetValues();
-
   location.reload();
 }
 
