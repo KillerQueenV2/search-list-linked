@@ -1,25 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Exercício 01</title>
-  <script src="script.js" defer></script>
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrutura de dados</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css" />
+
 </head>
+
 <body>
-  <form>
-    <input type="text" placeholder="Search text" />
-    <textarea 
-      rows="15"
-      col="50"
-      placeholder="Insert the text"
-    >
+
+    <!--Formulário-->
+    <div width="100%">
+        <div>
+            <h1 id="titulo">Estrutura de dados</h1>
+        </div>
+        <br>
+        <div>
+            <form>
+                <input type="text" placeholder="Pesquisa o texto" />
+                <textarea id="textarea" rows="15" col="50" placeholder="Insira o texto">
 
     </textarea>
-    <input type="text" id="result" placeholder="Resultado da pesquisa" />
-    <button type='button'>Pesquisar</button>
-  </form>
+                <input disabled type="text" id="result" placeholder="Resultado da pesquisa" />
+                <button type='button'>Pesquisar</button>
+            </form>
+        </div>
+    </div>
 </body>
+
 </html>
